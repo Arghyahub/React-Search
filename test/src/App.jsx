@@ -1,14 +1,13 @@
 import { useState } from "react";
 
 import Trie from "./trie";
+import datas from "./data"
 const search = new Trie() ;
-
-search.insertWord("Hello","https://google.com") ;
-search.insertWord("Hemlo","https://bing.com") ;
-search.insertWord("Help","https://msn.com") ;
-search.insertWord("Heavy","https://yahoo.com") ;
-search.insertWord("Hethen","https://yandex.com") ;
-search.insertWord("Heap","https://github.com") ;
+// Feed Data to Trie
+datas.forEach(elem => {
+  search.insertWord(elem[0],elem[1]) ;
+});
+// DS work complete
 
 const App = () => {
   const [Display, setDisplay] = useState([]) ;
@@ -18,12 +17,12 @@ const App = () => {
   }
 
   return (
-    <div style={{height: "100vh" , width: "100vw" , display: "flex", justifyContent: "center" , alignItems: "center" , flexDirection: "column"}}>
+    <div style={{display: "flex" , flexDirection: "column"}}>
       <input type="text" onChange={handleChange} />
       <div style={{ display: "flex" , flexDirection: "column"}}>
         { Display.map((outer) => (
           outer.links.map((inner,ind) => (
-            <a key={ind} href={inner}>{outer.str}</a>
+            <a key={ind} href={inner} style={{textTransform: "capitalize"}} >{outer.str}</a>
           ))
         ))
         }

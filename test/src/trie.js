@@ -46,11 +46,11 @@ class Trie {
     }
 
     getWordsUtil = (node , ans , arr) => {
-        if (node.end){
+        if (node.end>0){
             ans.push({str: arr.join("") , links : node.links}) ;
         }
         
-        for (let i=97; i<=112; i++){
+        for (let i=97; i<=122; i++){
             const ch = String.fromCharCode(i) ;
             if (node.exist(ch)){
                 arr.push(ch) ;
