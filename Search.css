@@ -1,0 +1,41 @@
+.input-div {
+    display: flex;
+    align-items: center
+}
+
+.input-style {
+    height: 25px;
+    border-right: none;
+    border-radius: 4rem 0 0 4rem;
+    outline: none;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.input-icon {
+    border: 2px solid grey;
+    margin: 0;
+    height: 25px;
+    border-left: none;
+    padding: 1px;
+    border-radius: 0 4rem 4rem 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

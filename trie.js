@@ -23,7 +23,7 @@ class Node {
         const num = ch.charCodeAt(0) - 97 ;
         return this.child[num] ;
     }
-};
+}
 
 class Trie {
     root = new Node() ;
@@ -46,11 +46,11 @@ class Trie {
     }
 
     getWordsUtil = (node , ans , arr) => {
-        if (node.end){
+        if (node.end>0){
             ans.push({str: arr.join("") , links : node.links}) ;
         }
         
-        for (let i=97; i<=112; i++){
+        for (let i=97; i<=122; i++){
             const ch = String.fromCharCode(i) ;
             if (node.exist(ch)){
                 arr.push(ch) ;
@@ -61,6 +61,8 @@ class Trie {
     }
 
     getWords = (str) => {
+        if (str.length == 0)
+            return [] ;
         const ans = [] ;
         const arr = [] ;
         let node = this.root;
@@ -79,10 +81,6 @@ class Trie {
         this.getWordsUtil(node,ans,arr) ;
         return ans;
     }
-};
+}
 
-
-const obj = new Trie() ;
-
-obj.insertWord("Hemlo","https://google.com") ;
-obj.insertWord("Hemko","https://doodle.com") ;
+export default Trie;
