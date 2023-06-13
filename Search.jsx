@@ -15,7 +15,7 @@ datas.forEach(elem => {
 //  -------  CONFIGURE THE STYLE HERE ------
 
 const componentHeight = "250px" ; // Height of the component
-const componentWidth = "100vw" ;
+const componentWidth = "100%" ;
 
 const inputHeight = "25px" ;    // Height of the text input box
 
