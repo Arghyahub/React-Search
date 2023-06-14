@@ -45,6 +45,7 @@ const resultDiv = {
   flexDirection: "column",
   maxHeight: `${componentHeight}`,
   overflowY: "scroll",
+  borderRadius: "0 0 2rem 2rem" ,
 }
 
 const resultStyl = {
@@ -55,7 +56,7 @@ const resultStyl = {
   paddingLeft: "2%",
   fontSize: "1.2rem",
   fontFamily: "monospace",
-  backgroundColor: "white",
+  backgroundColor: "#EEEEEE",
 }
 
 // -----------------------------------------
